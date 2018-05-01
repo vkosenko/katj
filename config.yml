@@ -1,6 +1,6 @@
 # Base configs
 baseurl: "https://katj.kosenko.eu"
-portfolio_location: images/portfolio
+portfolio_location: "images/portfolio"
 
 # UI configs
 title: "Katja Kosenko"
