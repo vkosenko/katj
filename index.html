@@ -41,7 +41,7 @@ layout: default
                         {% if i % 2 == 0 %}
                             {% assign evenOdd = "odd" %}
                         {% endif %}
-                        {% assign thumb = site.portfolio_location | append: '/' | append: 'gemaelde' | append: '/' | append: thumbFolder | append: '/' | append: portfolio.thumb %}
+                        {% assign thumb = '' | append: site.portfolio_location | append: '/' | append: 'gemaelde' | append: '/' | append: thumbFolder | append: '/' | append: portfolio.thumb %}
 
                         <article id="node-{{ portfolio.hash }}" class="node node-article node-promoted node-teaser {{ evenOdd }} first {{ postPrefix }}post-box clearfix" about="portfolio.html#{{ portfolio.hash }}" typeof="sioc:Item foaf:Document">
                             <header>
