@@ -1,0 +1,14 @@
+# Base configs
+baseurl: "https://katj.kosenko.eu"
+image_fulls_loc: "/images/fulls"
+image_thumbs_loc: "/images/thumbs"
+
+# UI configs
+title: "Katja Kosenko"
+subtitle: "Grafikdesignerin"
+author: "Katja Kosenko"
+header:
+ title: ""
+ subtitle: ""
+
+
