@@ -38,7 +38,8 @@ layout: default
                             {% assign postPrefix = "big-" %}
                             {% assign thumbFolder = "images" %}
                         {% endif %}
-                        {% if i % 2 == 0 %}
+                        {% assign eo = i | modulo: 2 %}
+                        {% if eo == 0 %}
                             {% assign evenOdd = "odd" %}
                         {% endif %}
                         {% assign thumb = 'images/portfolio' | append: '/' | append: portfolio.hash | append: '/' | append: thumbFolder | append: '/' | append: portfolio.thumb %}
