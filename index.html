@@ -34,6 +34,9 @@ layout: default
                         {% assign evenOdd = "even" %}
                         {% assign thumb = "images/portfolio/gemaelde/thumbs/gemaelde_1.jpg" %}
                         {% assign postPrefix = "" %}
+                        {% if i = 1 %}
+                            {% assign postPrefix = "big-" %}
+                        {% endif %}
 
                         <article id="node-{{ portfolio.hash }}" class="node node-article node-promoted node-teaser {{ evenOdd }} first {{ postPrefix }}post-box clearfix" about="portfolio.html#{{ portfolio.hash }}" typeof="sioc:Item foaf:Document">
                             <header>
