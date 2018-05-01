@@ -1,14 +1,14 @@
 # Base configs
 baseurl: "https://katj.kosenko.eu"
-image_fulls_loc: "/images/fulls"
-image_thumbs_loc: "/images/thumbs"
+portfolio_location: images/portfolio
 
 # UI configs
 title: "Katja Kosenko"
 subtitle: "Grafikdesignerin"
-author: "Katja Kosenko"
-header:
- title: ""
- subtitle: ""
+
+# Portfolio configs
+portfolio:
+
+
 
 

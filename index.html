@@ -27,7 +27,32 @@ layout: default
         <div class="region region-content">
             <div id="block-system-main" class="block block-system">
                 <div class="content">
-AA
+
+                    {% assign i = 0 %}
+                    {% for portfolio in site.data.portfolio %}
+                        {% assign i = i | plus:1 %}
+                        {% assign evenOdd = "even" %}
+                        {% assign thumb = "images/portfolio/gemaelde/thumbs/gemaelde.jpg" %}
+                        <article id="node-{{ portfolio.hash }}" class="node node-article node-promoted node-teaser {{ evenOdd }} first %%BIG_POST_PREFIX%%post-box clearfix" about="portfolio.html#{{ portfolio.hash }}" typeof="sioc:Item foaf:Document">
+                            <header>
+                                <h3><a href="portfolio.html#{{ portfolio.hash }}">{{ portfolio.name }}</a></h3>
+                                <span property="dc:title" content="{{ portfolio.name }}" class="rdf-meta element-hidden"></span>
+                                <span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+                            </header>
+                            <div class="content">
+                                <div class="field field-name-field-image field-type-image field-label-hidden">
+                                    <div class="field-items">
+                                        <div class="field-item {{ evenOdd }}" rel="og:image rdfs:seeAlso" resource="{{ thumb }}">
+                                            <a href="portfolio.html#{{ portfolio.hash }}">
+                                                <img typeof="foaf:Image" src="{{ thumb }}"  alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}
+
                 </div>
             </div>
         </div>
