@@ -112,7 +112,7 @@
   thumb: website_layouts1.jpg
   gallery:
     - thumb: website_layouts1.jpg
-      desc: http://fredilit-dellendoktor.de
+      desc: <a href='http://fredilit-dellendoktor.de'>http://fredilit-dellendoktor.de</a>
     - thumb: website_layouts2.jpg
     - thumb: website_layouts3.jpg
 - name: Bigboards
