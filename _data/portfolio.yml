@@ -73,6 +73,16 @@
     - thumb: flyers11.JPG
     - thumb: flyers12.JPG
     - thumb: flyers13.JPG
+- name: Corporate Design
+  hash: corporate_design
+  thumb: corporate_design1.jpg
+  gallery:
+    - thumb: corporate_design1.jpg
+    - thumb: corporate_design2.jpg
+    - thumb: corporate_design3.jpg
+    - thumb: corporate_design4.jpg
+    - thumb: corporate_design5.jpg
+    - thumb: corporate_design6.jpg
 - name: Kalendar
   hash: kalendar
   thumb: kalendar1.jpg
@@ -114,3 +124,15 @@
     - thumb: bigboards4.jpg
     - thumb: bigboards5.jpg
     - thumb: bigboards6.jpg
+- name: Geschenkideen
+  hash: geschenkideen
+  thumb: geschenkideen1.jpg
+  gallery:
+    - thumb: geschenkideen1.jpg
+    - thumb: geschenkideen2.jpg
+    - thumb: geschenkideen3.jpg
+    - thumb: geschenkideen4.jpg
+    - thumb: geschenkideen5.jpg
+    - thumb: geschenkideen6.jpg
+    - thumb: geschenkideen7.jpg
+    - thumb: geschenkideen8.jpg
