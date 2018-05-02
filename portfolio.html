@@ -41,7 +41,7 @@ layout: default
                                 thumb: '{{ portfolio.thumb }}',
                                 gallery: [
                                     {% for thumb in portfolio.gallery %}
-                                    {thumb: '{{ thumb.thumb }}'},
+                                    {thumb: '{{ thumb.thumb }}', desc: '{{ thumb.desc }}'},
                                     {% endfor %}
                                 ]
                             },
@@ -75,7 +75,7 @@ layout: default
                                     img += ' alt=""';
                                     img += ' src="' + galleriesFolder + '/' + galleries[galleryIndex].hash + '/' + thumbsFolder + '/' + galleries[galleryIndex].gallery[i].thumb + '"';
                                     img += ' data-image="' + galleriesFolder + '/' + galleries[galleryIndex].hash + '/' + imagesFolder + '/' + galleries[galleryIndex].gallery[i].thumb + '"';
-                                    img += ' data-description="" />';
+                                    img += ' data-description="' + galleries[galleryIndex].gallery[i].thumb + '" />';
 
                                     imgs += img;
                                 }
