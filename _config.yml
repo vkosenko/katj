@@ -6,10 +6,6 @@ portfolio_location: "images/portfolio"
 title: "Katja Kosenko"
 subtitle: "Grafikdesignerin"
 
-collections:
-  portfolio:
-    output: true
-    permalink: /:name
 
 
 

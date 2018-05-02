@@ -28,7 +28,90 @@ layout: default
             <div id="block-system-main" class="block block-system">
                 <div class="content">
 
-                    {{ page.path }}
+                    <div id="gallery" style="display:none;">
+
+                    </div>
+
+                    <script>
+                        var galleries = [
+                            {% for gallery in site.data.portfolio %}
+                            {
+                                name: '{{ gallery.name }}',
+                                hash: '{{ gallery.hash }}',
+                                thumb: '{{ gallery.thumb }}',
+                                gallery: [
+                                    {thumb: 'gemaelde_1.jpg'},
+                                    {thumb: 'gemaelde_2.jpg'},
+                                    {thumb: 'gemaelde_3.jpg'},
+                                    {thumb: 'gemaelde_4.jpg'},
+                                    {thumb: 'gemaelde_5.jpg'},
+                                    {thumb: 'gemaelde_6.jpg'}
+                                ]
+                            },
+                            {% endfor %}
+                        ];
+
+                        $(document).ready(function(){
+                            var galleriesFolder = 'images/portfolio';
+                            var thumbsFolder = 'thumbs';
+                            var imagesFolder = 'images';
+                            var galleriesConf = {
+                                gallery_theme: "tiles",
+                                tiles_type: "columns",
+                                tile_enable_textpanel: true,
+                                tile_textpanel_title_text_align: "center",
+                                lightbox_textpanel_enable_description: true,
+                                tile_as_link:true
+                            };
+                            var galleryConf = {
+                                gallery_theme: "tiles",
+                                tiles_type: "columns",
+                                tile_enable_textpanel: true,
+                                tile_textpanel_title_text_align: "center",
+                                lightbox_textpanel_enable_description: true
+                            };
+
+                            var buildGallery = function(galleryIndex) {
+                                var imgs = '';
+                                for (var i = 0; i < galleries[galleryIndex].gallery.length; i++) {
+                                    var img = '<img';
+                                    img += ' alt=""';
+                                    img += ' src="' + galleriesFolder + '/' + galleries[galleryIndex].hash + '/' + thumbsFolder + '/' + galleries[galleryIndex].gallery[i].thumb + '"';
+                                    img += ' data-image="' + galleriesFolder + '/' + galleries[galleryIndex].hash + '/' + imagesFolder + '/' + galleries[galleryIndex].gallery[i].thumb + '"';
+                                    img += ' data-description="" />';
+
+                                    imgs += img;
+                                }
+                                $("#gallery").html(imgs);
+                                $("#gallery").unitegallery(galleryConf);
+                            }
+
+                            var getGalleryIndexFromHash = function() {
+                                var hash = window.location.hash.substring(1);
+                                if (hash.length === 0) {
+                                    return false;
+                                }
+                                for (var i = 0; i < galleries.length; i++) {
+                                    if (galleries[i].hash === hash) {
+                                        return i;
+                                    }
+                                }
+
+                                return false;
+                            }
+
+                            var galleryIndex = getGalleryIndexFromHash();
+
+                            if (galleryIndex === false) {
+                                $("#gallery").show().html("ERROR: INVALID GALLERY");
+                            } else {
+                                $("#page-title").html(galleries[galleryIndex].name);
+                                buildGallery(galleryIndex);
+                            }
+
+
+                        });
+                    </script>
 
                 </div>
             </div>
