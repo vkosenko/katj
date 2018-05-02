@@ -83,3 +83,34 @@
     - thumb: kalendar4.jpg
     - thumb: kalendar5.jpg
     - thumb: kalendar6.jpg
+- name: Hobbys
+  hash: hobbys
+  thumb: hobbys1.JPG
+  gallery:
+    - thumb: hobbys1.JPG
+    - thumb: hobbys2.JPG
+    - thumb: hobbys3.JPG
+    - thumb: hobbys4.JPG
+    - thumb: hobbys5.JPG
+    - thumb: hobbys6.JPG
+    - thumb: hobbys7.JPG
+    - thumb: hobbys8.JPG
+    - thumb: hobbys9.JPG
+    - thumb: hobbys10.JPG
+- name: Website Layouts
+  hash: website_layouts
+  thumb: website_layouts1.jpg
+  gallery:
+    - thumb: website_layouts1.jpg
+    - thumb: website_layouts2.jpg
+    - thumb: website_layouts3.jpg
+- name: Bigboards
+  hash: bigboards
+  thumb: bigboards1.jpg
+  gallery:
+    - thumb: bigboards1.jpg
+    - thumb: bigboards2.jpg
+    - thumb: bigboards3.jpg
+    - thumb: bigboards4.jpg
+    - thumb: bigboards5.jpg
+    - thumb: bigboards6.jpg
