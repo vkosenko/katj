@@ -1,3 +1,18 @@
+- name: Digital Art
+  hash: digitalarts
+  thumb: digitalarts1.jpg
+  gallery:
+    - thumb: digitalarts1.jpg
+    - thumb: digitalarts2.jpg
+    - thumb: digitalarts3.jpg
+    - thumb: digitalarts4.jpg
+    - thumb: digitalarts5.jpg
+    - thumb: digitalarts6.jpg
+    - thumb: digitalarts7.jpg
+    - thumb: digitalarts8.jpg
+    - thumb: digitalarts9.jpg
+    - thumb: digitalarts10.jpg
+    - thumb: digitalarts11.jpg
 - name: Gemälde
   hash: gemaelde
   thumb: gemaelde_1.jpg
@@ -22,3 +37,23 @@
     - thumb: schaufenster8.jpg
     - thumb: schaufenster9.jpg
     - thumb: schaufenster10.jpg
+- name: Postkarten
+  hash: postkarten
+  thumb: postkarten1.jpg
+  gallery:
+    - thumb: postkarten1.jpg
+    - thumb: postkarten2.jpg
+    - thumb: postkarten3.jpg
+    - thumb: postkarten4.jpg
+    - thumb: postkarten5.jpg
+    - thumb: postkarten6.jpg
+    - thumb: postkarten7.jpg
+    - thumb: postkarten8.jpg
+    - thumb: postkarten9.jpg
+    - thumb: postkarten10.jpg
+    - thumb: postkarten11.jpg
+    - thumb: postkarten12.jpg
+    - thumb: postkarten13.jpg
+    - thumb: postkarten14.jpg
+    - thumb: postkarten15.jpg
+    - thumb: postkarten16.jpg
