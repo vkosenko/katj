@@ -34,8 +34,10 @@ layout: default
                         {% assign evenOdd = "even" %}
                         {% assign thumbFolder = "thumbs" %}
                         {% assign postPrefix = "" %}
+                        {% assign imgStyle = "" %}
                         {% if i == 1 %}
                             {% assign postPrefix = "big-" %}
+                            {% assign imgStyle = "width: 562px; height: 464px;" %}
                         {% endif %}
                         {% assign eo = i | modulo: 2 %}
                         {% if eo == 0 %}
@@ -54,7 +56,7 @@ layout: default
                                     <div class="field-items">
                                         <div class="field-item {{ evenOdd }}" rel="og:image rdfs:seeAlso" resource="{{ thumb }}">
                                             <a href="portfolio.html#{{ portfolio.hash }}">
-                                                <img typeof="foaf:Image" src="{{ thumb }}"  alt="" />
+                                                <img typeof="foaf:Image" src="{{ thumb }}"  alt="" style="{{ imgStyle }}" />
                                             </a>
                                         </div>
                                     </div>
