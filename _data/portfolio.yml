@@ -112,6 +112,7 @@
   thumb: website_layouts1.jpg
   gallery:
     - thumb: website_layouts1.jpg
+      desc: http://fredilit-dellendoktor.de
     - thumb: website_layouts2.jpg
     - thumb: website_layouts3.jpg
 - name: Bigboards
