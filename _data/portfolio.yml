@@ -57,3 +57,30 @@
     - thumb: postkarten14.jpg
     - thumb: postkarten15.jpg
     - thumb: postkarten16.jpg
+- name: Flyer
+  hash: flyers
+  thumb: flyers1.JPG
+  gallery:
+    - thumb: flyers1.JPG
+    - thumb: flyers2.JPG
+    - thumb: flyers3.JPG
+    - thumb: flyers4.JPG
+    - thumb: flyers5.JPG
+    - thumb: flyers6.JPG
+    - thumb: flyers7.JPG
+    - thumb: flyers8.JPG
+    - thumb: flyers9.JPG
+    - thumb: flyers10.JPG
+    - thumb: flyers11.JPG
+    - thumb: flyers12.JPG
+    - thumb: flyers13.JPG
+- name: Kalendar
+  hash: kalendar
+  thumb: kalendar1.jpg
+  gallery:
+    - thumb: kalendar1.jpg
+    - thumb: kalendar2.jpg
+    - thumb: kalendar3.jpg
+    - thumb: kalendar4.jpg
+    - thumb: kalendar5.jpg
+    - thumb: kalendar6.jpg
