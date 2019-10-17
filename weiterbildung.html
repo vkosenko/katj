@@ -58,7 +58,7 @@ layout: default
                            {% for weiterbildung in site.data.weiterbildung %}
                                 tblContent += '<tr>' +
                                     '<td>{{ weiterbildung.position }}</td>' +
-                                    '<td class="dauer">{{ weiterbildung.dauer }}' +
+                                    '<td class="dauer">' +
                                         '<ul>' +
                                         {% for dauer in weiterbildung.dauer %}
                                             '<li><strong>{{ dauer.titel }}</strong>{{ dauer.inhalt }}</li>' +
