@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+<div id="header_top">
+    <div class="header_top_border"></div>
+    <a class="home-icon toggle" href="/"><img src="assets/images/glyphicons_020_home.png"></a>
+    <a class="toggle-nav toggle" href="javascript:void(0);"><img src="assets/images/icon_nav_toggle-black.gif"></a>
+    <nav class="menu_cont">
+        <h2 class="element-invisible">Menu</h2>
+        <ul id="menu" class="links inline clearfix menu">
+            <li class="menu-218 first">
+                <a href="/" title="">Portfolio</a>
+            </li>
+            <li class="menu-355 last active">
+                <a href="lebenslauf.html">Lebenslauf</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="clear"></div>
+</div>
+
+<div id="content" class="column">
+    <div class="section">
+        <a id="main-content"></a>
+        <div class="tabs"></div>
+        <div class="region region-content">
+            <div id="block-system-main" class="block block-system">
+                <div class="content">
+
+                    <style>
+                        .wt td {
+                            padding: 8px;
+                            border: 1px solid gray;
+                        }
+                        .wt-header {
+                            background-color: lightgray;
+                        }
+                        .dauer {
+
+                        }
+                        .dauer ul {
+                            padding: 0px;
+                        }
+                        .dauer li {
+                            list-style-type: none;
+                            display: block;
+                        }
+                    </style>
+
+                    <script>
+                        var links = [
+                            {% for link in site.data.link %}
+                            {
+                                short: '{{ link.short }}',
+                                long: '{{ link.long }}'
+                            },
+                            {% endfor %}
+                        ];
+                        $(document).ready(function(){
+                           var getLinkIndexFromHash = function() {
+                                var hash = window.location.hash.substring(1);
+                                if (hash.length === 0) {
+                                    return false;
+                                }
+                                for (var i = 0; i < links.length; i++) {
+                                    if (links[i].short === hash) {
+                                        return links[i].long;
+                                    }
+                                }
+
+                                return false;
+                            }
+
+                            var longLink = getLinkIndexFromHash();
+
+                            if (longLink === false) {
+                                $("#linkContainer").html("FEHLER: der kurze Link wurde nicht erkannt");
+                            } else {
+                                $("#linkContainer").html('Weiterleitung zu: <a href="' + longLink + '">' + longLink + '</a>');
+                                window.location.replace(longLink);
+                            }
+                        });
+                    </script>
+
+                   <h1>Weiterleitung ...</h1>
+                    <div id="linkContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
