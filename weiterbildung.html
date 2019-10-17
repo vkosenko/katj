@@ -58,7 +58,7 @@ layout: default
                            {% assign tblRowCounter = 0 %}
                            {% for weiterbildung in site.data.weiterbildung %}
                                 tblContent += '<tr>' +
-                                    '<td>{{ increment tblRowCounter }}</td>' +
+                                    '<td>{% increment tblRowCounter %}.</td>' +
                                     '<td>{{ weiterbildung.position }}</td>' +
                                     '<td class="dauer">' +
                                         '<ul>' +
