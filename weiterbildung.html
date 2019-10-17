@@ -60,7 +60,7 @@ layout: default
                            var tblContent = '';
                            {% for weiterbildung in site.data.weiterbildung %}
                                 tblContent += '<tr>' +
-                                    '<td>' + {% increment tblRowCounter %} + 1 + '.</td>' +
+                                    '<td>' + ({% increment tblRowCounter %} + 1) + '.</td>' +
                                     '<td>{{ weiterbildung.position }}</td>' +
                                     '<td class="dauer">' +
                                         '<ul>' +
