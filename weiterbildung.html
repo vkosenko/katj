@@ -55,9 +55,10 @@ layout: default
                                             '<td>Link</td>' +
                                             '</tr>';
                            var tblContent = '';
+                           {% assign tblRowCounter = 0 %}
                            {% for weiterbildung in site.data.weiterbildung %}
                                 tblContent += '<tr>' +
-                                    '<td>1.</td>' +
+                                    '<td>{{ increment tblRowCounter }}</td>' +
                                     '<td>{{ weiterbildung.position }}</td>' +
                                     '<td class="dauer">' +
                                         '<ul>' +
