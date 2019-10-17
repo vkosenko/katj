@@ -45,66 +45,39 @@ layout: default
                         }
                     </style>
 
+                    <script>
+                        $(document).ready(function(){
+                           var tblHeader = '<tr class="wt-header">' +
+                                            '<td>#</td>' +
+                                            '<td>Position</td>' +
+                                            '<td>Dauer</td>' +
+                                            '<td>Firma</td>' +
+                                            '<td>Link</td>' +
+                                            '</tr>';
+                           var tblContent = '';
+                           {% for weiterbildung in site.data.weiterbildung %}
+                                tblContent += '<tr>' +
+                                    '<td>{{ weiterbildung.position }}</td>' +
+                                    '<td class="dauer">{{ weiterbildung.dauer }}' +
+                                        '<ul>' +
+                                        {% for dauer in weiterbildung.dauer %}
+                                            '<li><strong>{{ dauer.titel }}</strong>{{ dauer.inhalt }}</li>' +
+                                        {% endfor %} + '</ul></td>' +
+                                    '<td>{{ weiterbildung.firma }}</td>' +
+                                    '<td><a href="{{ weiterbildung.link }}" target="_blank">{{ weiterbildung.link }}</a></td>' +
+                                    '</tr>';
+                            {% endfor %}
+
+                            var tblHtml = '<table class="wt">' +
+                                    tblContent +
+                                    '</table>';
+
+                            $('#tblContainer').html(tblHtml);
+                        });
+                    </script>
 
                    <h1>Weiterbilung (von der Agentur für Arbeit gefördert)</h1>
-                    <table class="wt">
-                        <tr class="wt-header">
-                            <td>#</td>
-                            <td>Position</td>
-                            <td>Dauer</td>
-                            <td>Firma</td>
-                            <td>Link</td>
-                        </tr>
-                        <tr>
-                            <td>1.</td>
-                            <td>Kommunikationsdesigner/-in</td>
-                            <td class="dauer">
-                                <ul>
-                                    <li><strong>Start:</strong> 09.12.2019</li>
-                                    <li><strong>Ende:</strong> 01.05.2020</li>
-                                    <li><strong>Ort:</strong>Frankfurt a. M.</li>
-                                    <li><strong>Unterrichtszeiten:</strong> Mo.- Fr. 08:30 - 15:35 Uhr (in Wochen mit Feiertagen von 8:30 -17:10 Uhr)</li>
-                                </ul>
-                            </td>
-                            <td>Alfatraining.de</td>
-                            <td>https://cutt.ly/gesUPhe</td>
-                        </tr>
-                        <tr>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                        </tr>
-                        <tr>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                        </tr>
-                        <tr>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                        </tr>
-                        <tr>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                        </tr>
-                        <tr>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                            <td>1.</td>
-                        </tr>
-                    </table>
+                    <div id="tblContainer"></div>
                 </div>
             </div>
         </div>
