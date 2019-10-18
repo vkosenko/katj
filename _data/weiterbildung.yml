@@ -9,7 +9,7 @@
     - titel: 'Unterrichtszeiten'
       inhalt: 'Mo.- Fr. 08:30 - 15:35 Uhr (in Wochen mit Feiertagen von 8:30 -17:10 Uhr)'
   firma: 'Alfatraining.de'
-  link: 'https://katja.kosenko.eu/link.html#w1'
+  link: 'https://katja.kosenko.eu/link#w1'
 - position: 'Mediengestalter/-in Digital und Print (IHK) Fachrichtung Gestaltung und Technik'
   dauer:
     - titel: 'Start'
@@ -19,7 +19,7 @@
     - titel: 'Unterrichtszeiten'
       inhalt: 'Mo-Fr 8:00 - 16:00 Uhr.'
   firma: 'Wbstraining.de'
-  link: 'https://katja.kosenko.eu/link.html#w2'
+  link: 'https://katja.kosenko.eu/link#w2'
 - position: '2D- und 3D-Grafikspezialist'
   dauer:
     - titel: 'Start'
@@ -27,7 +27,7 @@
     - titel: 'Dauer'
       inhalt: 'ca. 16 Wochen'
   firma: 'comcave.college'
-  link: 'https://katja.kosenko.eu/link.html#w3'
+  link: 'https://katja.kosenko.eu/link#w3'
 - position: 'Weiterbildung Praxisnahe Mediengestaltung, Photoshop, Illustrator und InDesign'
   dauer:
     - titel: 'Start'
@@ -35,7 +35,7 @@
     - titel: 'Dauer'
       inhalt: 'ca. 12 Wochen'
   firma: 'comcave.college'
-  link: 'https://katja.kosenko.eu/link.html#w4'
+  link: 'https://katja.kosenko.eu/link#w4'
 - position: 'Umschulung Mediengestalterin/Mediengestalter (IHK)'
   dauer:
     - titel: 'Start'
@@ -43,4 +43,4 @@
     - titel: 'Dauer'
       inhalt: 'ca. 24 Wochen'
   firma: 'comcave.college'
-  link: 'https://katja.kosenko.eu/link.html#w5'
+  link: 'https://katja.kosenko.eu/link#w5'
