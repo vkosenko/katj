@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+<div id="header_top">
+    <div class="header_top_border"></div>
+    <a class="home-icon toggle" href="/"><img src="assets/images/glyphicons_020_home.png"></a>
+    <a class="toggle-nav toggle" href="javascript:void(0);"><img src="assets/images/icon_nav_toggle-black.gif"></a>
+    <nav class="menu_cont">
+        <h2 class="element-invisible">Menu</h2>
+        <ul id="menu" class="links inline clearfix menu">
+            <li class="menu-218 first">
+                <a href="/" title="">Portfolio</a>
+            </li>
+            <li class="menu-355 last">
+                <a href="lebenslauf.html">Lebenslauf</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="clear"></div>
+</div>
+
+<div id="content" class="column">
+    <div class="section">
+        <a id="main-content"></a>
+        <div class="tabs"></div>
+        <div class="region region-content">
+            <div id="block-system-main" class="block block-system">
+                <div class="content">
+
+                    <style>
+                        .wt td {
+                            padding: 8px;
+                            border: 1px solid gray;
+                        }
+                        .wt-header {
+                            background-color: lightgray;
+                        }
+                        .dauer {
+
+                        }
+                        .dauer ul {
+                            padding: 0px;
+                        }
+                        .dauer li {
+                            list-style-type: none;
+                            display: block;
+                        }
+                    </style>
+
+                    <script>
+                        $(document).ready(function(){
+                           var tblHeader = '<tr class="wt-header">' +
+                                            '<td>#</td>' +
+                                            '<td>Position</td>' +
+                                            '<td>Dauer / Ort</td>' +
+                                            '<td>Firma</td>' +
+                                            '<td>Link</td>' +
+                                            '</tr>';
+                           var tblContent = '';
+                           {% for stellenangebot in site.data.stellenangebote %}
+                                tblContent += '<tr>' +
+                                    '<td>' + ({% increment tblRowCounter %} + 1) + '.</td>' +
+                                    '<td>{{ stellenangebot.position }}</td>' +
+                                    '<td class="dauer">{{ stellenangebot.dauer }}</td>' +
+                                    '<td>{{ stellenangebot.firma }}</td>' +
+                                    '<td><a href="{{ stellenangebot.link }}" target="_blank">{{ stellenangebot.link }}</a></td>' +
+                                    '</tr>';
+                            {% endfor %}
+
+                            var tblHtml = '<table class="wt">' +
+                                    tblHeader +
+                                    tblContent +
+                                    '</table>';
+
+                            $('#tblContainer').html(tblHtml);
+                        });
+                    </script>
+
+                   <h1>Stellenangebote</h1>
+                    <div id="tblContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
